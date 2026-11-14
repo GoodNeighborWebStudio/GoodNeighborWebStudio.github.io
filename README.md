@@ -12,4 +12,4 @@ The intended repository is `GoodNeighborWebStudio/GoodNeighborWebStudio.github.i
 
 ## Receive quote requests
 
-The contact form submits to FormSubmit, which sends requests to `yngyngjnllc@gmail.com`. After publication, submit a test request through the live website and click the activation link in the confirmation email. Submit one more test to verify delivery. The contact section also has a direct email link.
+The contact form submits to FormSubmit, which sends requests to `yngyngjn.llc@gmail.com`. After publication, submit a test request through the live website and click the activation link in the confirmation email. Submit one more test to verify delivery. The contact section also has a direct email link.
