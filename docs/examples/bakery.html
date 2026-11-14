@@ -10,22 +10,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/demo.js" defer></script>
 </head>
 <body class="bakery">
   <div class="demo-banner"><a href="../index.html#work">← Back to portfolio</a><span>Sample business website</span></div>
-  <header class="wrap"><a href="./bakery.html" class="brand">Hearth &amp; Grain</a><nav aria-label="Hearth &amp; Grain navigation"><a href="#details">Menu</a><a href="#next">Visit</a></nav></header>
+  <header class="wrap"><a href="./bakery.html" class="brand">Hearth &amp; Grain</a><nav aria-label="Hearth &amp; Grain navigation"><a href="#details">Menu</a><a href="#visit">Visit</a><a href="#next">Preorder</a></nav></header>
   <main>
-    <section class="hero"><img src="../assets/bakery.webp" alt="Rustic sourdough loaf on a wooden table" width="834" height="468" fetchpriority="high"><div class="hero-copy wrap"><p class="kicker">THE NEIGHBORHOOD BAKEHOUSE</p><h1>Good bread.<br>Better mornings.</h1><p>Slow-fermented loaves, flaky pastries, and a little something warm for the walk home.</p><a class="cta" href="#details">See our menu <span aria-hidden="true">↗</span></a></div></section>
+    <section class="hero"><img src="../assets/bakery.webp" alt="Rustic sourdough loaf on a wooden table" width="834" height="468" fetchpriority="high"><div class="hero-copy wrap"><p class="kicker">THE NEIGHBORHOOD BAKEHOUSE</p><h1>Good bread.<br>Better mornings.</h1><p>Slow-fermented loaves, flaky pastries, and a little something warm for the walk home.</p><a class="cta" href="#details">Explore the menu <span aria-hidden="true">↗</span></a></div></section>
     <section class="details wrap" id="details">
-      <h2>Fresh from the oven</h2>
-      <div class="items">
-        <article><h3>Country sourdough</h3><p>Our signature loaf with a crackly crust and a soft, open crumb.</p></article>
-        <article><h3>Butter croissants</h3><p>Golden, flaky layers made with cultured butter.</p></article>
-        <article><h3>Seasonal buns</h3><p>A rotating bake inspired by whatever’s ripe this week.</p></article>
+      <div class="demo-section-heading">
+        <p class="kicker">The bakery counter</p>
+        <h2>Fresh from the oven</h2>
+        <p>Our loaves take two days from mix to bake. Pastries rotate with the season, and the counter is usually fullest in the morning.</p>
+      </div>
+      <div class="menu-filters" hidden aria-label="Menu categories"><button type="button" aria-pressed="true" data-category="0">Bread</button><button type="button" aria-pressed="false" data-category="1">Pastry</button><button type="button" aria-pressed="false" data-category="2">Coffee</button></div>
+      <div class="menu-groups">
+        <div class="menu-group" data-group="0"><h3>Bread</h3>
+          <article><div><h4>Country sourdough</h4><p>A crackly crust, an open crumb, and a mild tang. Baked daily.</p></div><span>$9</span></article>
+          <article><div><h4>Seeded rye</h4><p>A hearty slice with toasted sunflower seeds and a hint of caraway.</p></div><span>$11</span></article>
+        </div>
+        <div class="menu-group" data-group="1"><h3>Pastry</h3>
+          <article><div><h4>Butter croissant</h4><p>Cultured butter folded into golden, flaky layers.</p></div><span>$4.50</span></article>
+          <article><div><h4>Cardamom bun</h4><p>A soft knot with freshly ground cardamom and a sugar glaze.</p></div><span>$5</span></article>
+        </div>
+        <div class="menu-group" data-group="2"><h3>Coffee</h3>
+          <article><div><h4>Batch brew</h4><p>A rotating single-origin coffee from our neighborhood roaster.</p></div><span>$3.50</span></article>
+          <article><div><h4>Cappuccino</h4><p>Espresso and steamed milk. Oat milk available.</p></div><span>$4.75</span></article>
+        </div>
       </div>
     </section>
-    <section class="next" id="next"><div class="wrap"><h2>Plan a visit</h2><p>Tuesday–Friday, 7 am–2 pm. Saturday and Sunday, 8 am–2 pm. The bread shelf is usually fullest in the morning.</p></div></section>
+    <section class="demo-feature" id="visit">
+      <div class="wrap feature-grid">
+        <img src="../assets/bakery-menu.webp" alt="Fresh croissants and cardamom buns on bakery trays" width="834" height="468" loading="lazy">
+        <div>
+          <p class="kicker">Come by</p>
+          <h2>A proper bakery morning.</h2>
+          <p>Stop in for a loaf, a pastry, and coffee to go. Use the sample preorder below if you want to see how a bakery could set aside your favorites.</p>
+          <dl class="demo-facts">
+          <div><dt>Counter hours</dt><dd>Tue–Fri, 7 am–2 pm<br>Sat–Sun, 8 am–2 pm<br>Closed Mondays</dd></div>
+          <div><dt>Pickup windows</dt><dd>Morning, 9–11 am<br>Midday, 11 am–1 pm</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="next" id="next">
+      <div class="wrap booking-grid">
+        <div><h2>Plan your pickup</h2><p>Choose a bake and a pickup window. The preview shows your estimated total.</p></div>
+        <div class="demo-form-panel">
+          <form class="demo-form" data-result="Here’s your sample preorder." hidden>
+        <label>Bake<select name="bake" required><option value="" selected disabled>Choose bake</option><option data-price='9'>Country sourdough</option><option data-price='11'>Seeded rye</option><option data-price='4.50'>Butter croissant</option><option data-price='5'>Cardamom bun</option></select></label>
+        <label>Quantity<select name="quantity" required><option value="" selected disabled>Choose quantity</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+        <label>Pickup window<select name="pickup" required><option value="" selected disabled>Choose pickup window</option><option>Next open day, 9–11 am</option><option>Next open day, 11 am–1 pm</option></select></label>
+            <button type="submit" class="cta">Preview preorder <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="demo-result" role="status"></div>
+          <p class="demo-note">This demo accepts no payments or orders.</p>
+          <noscript>Enable JavaScript to try this preview.</noscript>
+        </div>
+      </div>
+    </section>
+    <section class="faq wrap">
+      <h2>Good to know</h2>
+      <div>
+        <details><summary>How far ahead should I preorder?</summary><p>For this sample menu, choose a pickup window for the next open day. Large orders typically need two days’ notice.</p></details>
+        <details><summary>Do you have allergen information?</summary><p>The bakery handles wheat, dairy, eggs, and nuts. Ask about ingredients before ordering if you have an allergy.</p></details>
+        <details><summary>Can I buy bread without preordering?</summary><p>Yes. The counter has a daily selection until it sells out.</p></details>
+      </div>
+    </section>
   </main>
-  <footer class="wrap">Website concept by <a href="../index.html">Good Neighbor Web Studio</a></footer>
+  <footer class="wrap demo-footer"><span>Hearth &amp; Grain</span><a href="../index.html#work">Website concept by Good Neighbor Web Studio</a></footer>
 </body>
 </html>

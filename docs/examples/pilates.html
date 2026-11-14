@@ -10,22 +10,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/demo.js" defer></script>
 </head>
 <body class="pilates">
   <div class="demo-banner"><a href="../index.html#work">← Back to portfolio</a><span>Sample business website</span></div>
-  <header class="wrap"><a href="./pilates.html" class="brand">Form &amp; Field Pilates</a><nav aria-label="Form &amp; Field Pilates navigation"><a href="#details">Classes</a><a href="#next">First visit</a></nav></header>
+  <header class="wrap"><a href="./pilates.html" class="brand">Form &amp; Field Pilates</a><nav aria-label="Form &amp; Field Pilates navigation"><a href="#details">Classes</a><a href="#visit">First visit</a><a href="#next">Schedule</a></nav></header>
   <main>
     <section class="hero wrap"><div class="split-copy"><p class="kicker">SMALL-GROUP MAT &amp; REFORMER PILATES</p><h1>Move at your own pace.</h1><p>A calmer space to get stronger, move well, and find a routine that feels good.</p><a class="cta" href="#details">Explore classes <span aria-hidden="true">↗</span></a></div><img src="../assets/pilates.webp" alt="Bright Pilates studio with floor mats and wooden reformers" width="834" height="468" fetchpriority="high"></section>
     <section class="details wrap" id="details">
-      <h2>Find a class that fits</h2>
-      <div class="items">
-        <article><h3>Mat foundations</h3><p>An accessible introduction to Pilates breathing, alignment, and core work.</p></article>
-        <article><h3>Reformer flow</h3><p>A small-group class with guided exercises on the reformer.</p></article>
-        <article><h3>Private session</h3><p>One-on-one instruction tailored to your goals and comfort level.</p></article>
+      <div class="demo-section-heading">
+        <p class="kicker">Mat, reformer &amp; private sessions</p>
+        <h2>Find a class that fits</h2>
+        <p>Choose a smaller class and get guidance as you go. If you’re new to Pilates, start with Mat Foundations or a private session.</p>
+      </div>
+      <div class="menu-filters" hidden aria-label="Classes categories"><button type="button" aria-pressed="true" data-category="0">Mat</button><button type="button" aria-pressed="false" data-category="1">Reformer</button><button type="button" aria-pressed="false" data-category="2">Private</button></div>
+      <div class="menu-groups">
+        <div class="menu-group" data-group="0"><h3>Mat</h3>
+          <article><div><h4>Mat foundations</h4><p>Practice Pilates breathing, alignment, and the basic movements at an easy pace.</p></div><span>Beginner · 45 min</span></article>
+          <article><div><h4>Mat flow</h4><p>A continuous sequence with options to make each exercise easier or harder.</p></div><span>Mixed level · 50 min</span></article>
+        </div>
+        <div class="menu-group" data-group="1"><h3>Reformer</h3>
+          <article><div><h4>Reformer basics</h4><p>Get comfortable with the springs and carriage while learning a few core exercises.</p></div><span>Beginner · 50 min</span></article>
+          <article><div><h4>Reformer flow</h4><p>A guided workout with layered progressions for people familiar with the equipment.</p></div><span>Mixed level · 50 min</span></article>
+        </div>
+        <div class="menu-group" data-group="2"><h3>Private</h3>
+          <article><div><h4>Private session</h4><p>Work with an instructor on a pace and set of movements that fit your goals.</p></div><span>One-on-one · 55 min</span></article>
+        </div>
       </div>
     </section>
-    <section class="next" id="next"><div class="wrap"><h2>Your first visit</h2><p>Wear clothes you can move in and arrive ten minutes early so we can show you around.</p><details><summary>Do I need previous experience?</summary><p>Mat Foundations is designed for first-time visitors. Your instructor will walk you through each movement.</p></details></div></section>
+    <section class="demo-feature" id="visit">
+      <div class="wrap feature-grid">
+        <img src="../assets/pilates-class.webp" alt="Instructor guiding a small group Pilates mat session" width="834" height="468" loading="lazy">
+        <div>
+          <p class="kicker">Your first class</p>
+          <h2>Come as you are.</h2>
+          <p>Arrive ten minutes early and wear something you can move in. We’ll show you where to put your things, help you get set up, and explain the movements as we go.</p>
+          <dl class="demo-facts">
+          <div><dt>Drop-in rates</dt><dd>Mat class $24<br>Reformer class $38<br>Private session $95</dd></div>
+          <div><dt>What to bring</dt><dd>Water and comfortable clothes. Bring grip socks for reformer. Mats and props are provided.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="next" id="next">
+      <div class="wrap booking-grid">
+        <div><h2>Try a class</h2><p>Pick a class in the sample schedule to preview a reservation.</p></div>
+        <div class="demo-form-panel">
+          <form class="demo-form" data-result="Here’s your sample class reservation." hidden>
+        <label>Class and time<select name="class" required><option value="" selected disabled>Choose class and time</option><option>Mat foundations · Monday, 8:00 am</option><option>Reformer basics · Tuesday, 5:30 pm</option><option>Reformer flow · Thursday, 6:00 pm</option><option>Mat flow · Saturday, 9:00 am</option><option>Private session · Saturday, 11:00 am</option></select></label>
+            <button type="submit" class="cta">Preview class reservation <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="demo-result" role="status"></div>
+          <p class="demo-note">This demo doesn’t reserve a spot or collect payment.</p>
+          <noscript>Enable JavaScript to try this preview.</noscript>
+        </div>
+      </div>
+    </section>
+    <section class="faq wrap">
+      <h2>Good to know</h2>
+      <div>
+        <details><summary>Do I need experience?</summary><p>Mat Foundations and Reformer Basics are designed for first-time visitors. Your instructor will walk through each movement.</p></details>
+        <details><summary>Which class should I book first?</summary><p>Start with Mat Foundations for a gentle introduction, or Reformer Basics if you’d like to try the equipment.</p></details>
+        <details><summary>How large are the classes?</summary><p>The sample schedule allows up to eight in a mat class and six on reformers.</p></details>
+      </div>
+    </section>
   </main>
-  <footer class="wrap">Website concept by <a href="../index.html">Good Neighbor Web Studio</a></footer>
+  <footer class="wrap demo-footer"><span>Form &amp; Field Pilates</span><a href="../index.html#work">Website concept by Good Neighbor Web Studio</a></footer>
 </body>
 </html>

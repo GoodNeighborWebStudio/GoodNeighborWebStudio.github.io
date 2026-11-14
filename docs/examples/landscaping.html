@@ -10,22 +10,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/demo.js" defer></script>
 </head>
 <body class="landscaping">
   <div class="demo-banner"><a href="../index.html#work">← Back to portfolio</a><span>Sample business website</span></div>
-  <header class="wrap"><a href="./landscaping.html" class="brand">Greenway Landscaping</a><nav aria-label="Greenway Landscaping navigation"><a href="#details">Services</a><a href="#next">Estimates</a></nav></header>
+  <header class="wrap"><a href="./landscaping.html" class="brand">Greenway Landscaping</a><nav aria-label="Greenway Landscaping navigation"><a href="#details">Services</a><a href="#visit">Projects</a><a href="#next">Get an estimate</a></nav></header>
   <main>
     <section class="hero split wrap"><div class="split-copy"><p class="kicker">LANDSCAPE DESIGN &amp; CARE</p><h1>Make more of<br>the outdoors.</h1><p>Thoughtful planting, welcoming paths, and outdoor spaces that feel like home.</p><a class="cta" href="#next">Request an estimate <span aria-hidden="true">↗</span></a></div><img src="../assets/landscaping.webp" alt="Stepping-stone path through a planted front yard" width="834" height="468" fetchpriority="high"></section>
     <section class="details wrap" id="details">
-      <h2>From sketch to garden</h2>
-      <div class="items">
-        <article><h3>Garden design</h3><p>A planting plan that suits your yard, your style, and the time you want to spend caring for it.</p></article>
-        <article><h3>Landscape installation</h3><p>Planting, paths, and edging to bring your outdoor plans to life.</p></article>
-        <article><h3>Seasonal care</h3><p>Pruning, mulching, and cleanups to keep things looking their best.</p></article>
+      <div class="demo-section-heading">
+        <p class="kicker">Design, installation &amp; care</p>
+        <h2>Make room for the outdoors.</h2>
+        <p>From a new front path to a whole-yard refresh, we help you choose plants and materials that fit your site and how you want to use it.</p>
+      </div>
+      <div class="menu-filters" hidden aria-label="Services categories"><button type="button" aria-pressed="true" data-category="0">Design</button><button type="button" aria-pressed="false" data-category="1">Installation</button><button type="button" aria-pressed="false" data-category="2">Care</button></div>
+      <div class="menu-groups">
+        <div class="menu-group" data-group="0"><h3>Design</h3>
+          <article><div><h4>Garden design</h4><p>We look at sun, drainage, and how you use the space, then draw up a planting plan.</p></div><span>Site visit + plan</span></article>
+          <article><div><h4>Planting consultation</h4><p>Get a practical list of what to keep, what to replace, and what will grow well.</p></div><span>Walk-through</span></article>
+        </div>
+        <div class="menu-group" data-group="1"><h3>Installation</h3>
+          <article><div><h4>Planting &amp; irrigation</h4><p>Drought-tolerant planting, soil prep, and drip irrigation where needed.</p></div><span>Scoped to your yard</span></article>
+          <article><div><h4>Paths &amp; patios</h4><p>Gravel paths, pavers, and small patios suited to the way you move outdoors.</p></div><span>Scoped to your yard</span></article>
+        </div>
+        <div class="menu-group" data-group="2"><h3>Care</h3>
+          <article><div><h4>Seasonal cleanup</h4><p>Pruning, bed cleanup, and mulch to get the garden ready for the next season.</p></div><span>One-time visit</span></article>
+          <article><div><h4>Garden maintenance</h4><p>Ongoing care for established beds and newly installed landscapes.</p></div><span>Recurring visits</span></article>
+        </div>
       </div>
     </section>
-    <section class="next" id="next"><div class="wrap"><h2>Request an estimate</h2><p>Start with your neighborhood, a few photos of your yard, and a short note about what you’d like to change.</p><details><summary>What happens after I ask?</summary><p>On a live site, the landscaping team could follow up to learn more about your yard and schedule a visit.</p></details></div></section>
+    <section class="demo-feature" id="visit">
+      <div class="wrap feature-grid">
+        <img src="../assets/greenway-garden.webp" alt="Compact gravel garden with terracotta pots and layered plants" width="834" height="468" loading="lazy">
+        <div>
+          <p class="kicker">Featured project</p>
+          <h2>A small yard with room to unwind.</h2>
+          <p>This concept pairs a gravel seating area with native grasses, sage, and pots of different heights. A compact layout leaves a clear path between the house and the seating area.</p>
+          <dl class="demo-facts">
+          <div><dt>Service area</dt><dd>San Francisco, Daly City, and South San Francisco</dd></div>
+          <div><dt>How an estimate works</dt><dd>Tell us about the space. We’ll discuss the work and arrange a site visit before preparing a written quote.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="next" id="next">
+      <div class="wrap booking-grid">
+        <div><h2>Tell us about your yard.</h2><p>Pick a project type and a timeframe, then add a few details about your space.</p></div>
+        <div class="demo-form-panel">
+          <form class="demo-form" data-result="Here’s your sample estimate request." hidden>
+        <label>Project type<select name="project" required><option value="" selected disabled>Choose project type</option><option>Garden design</option><option>Planting &amp; irrigation</option><option>Paths &amp; patios</option><option>Seasonal cleanup</option><option>Garden maintenance</option></select></label>
+        <label>Service area<select name="area" required><option value="" selected disabled>Choose service area</option><option>San Francisco</option><option>Daly City</option><option>South San Francisco</option></select></label>
+        <label>Ideal timeframe<select name="timeframe" required><option value="" selected disabled>Choose ideal timeframe</option><option>Within a month</option><option>In the next 1–3 months</option><option>I’m still planning</option></select></label>
+        <label>What would you like to change?<textarea name="description" rows="3" maxlength="500" required></textarea></label>
+            <button type="submit" class="cta">Preview estimate request <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="demo-result" role="status"></div>
+          <p class="demo-note">This demo does not send an estimate request.</p>
+          <noscript>Enable JavaScript to try this preview.</noscript>
+        </div>
+      </div>
+    </section>
+    <section class="faq wrap">
+      <h2>Good to know</h2>
+      <div>
+        <details><summary>Can I keep my existing plants?</summary><p>Yes. We start by identifying healthy plants that support your design and can work around them.</p></details>
+        <details><summary>Can you help with a small yard?</summary><p>Yes. A planting refresh or a better path can make a big difference in a compact space.</p></details>
+        <details><summary>What changes the price?</summary><p>Access, site preparation, materials, and project size all affect the estimate.</p></details>
+      </div>
+    </section>
   </main>
-  <footer class="wrap">Website concept by <a href="../index.html">Good Neighbor Web Studio</a></footer>
+  <footer class="wrap demo-footer"><span>Greenway Landscaping</span><a href="../index.html#work">Website concept by Good Neighbor Web Studio</a></footer>
 </body>
 </html>

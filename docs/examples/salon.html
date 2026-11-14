@@ -10,22 +10,73 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/demo.js" defer></script>
 </head>
 <body class="salon">
   <div class="demo-banner"><a href="../index.html#work">← Back to portfolio</a><span>Sample business website</span></div>
-  <header class="wrap"><a href="./salon.html" class="brand">Sunday Kind Salon</a><nav aria-label="Sunday Kind Salon navigation"><a href="#details">Services</a><a href="#next">Appointments</a></nav></header>
+  <header class="wrap"><a href="./salon.html" class="brand">Sunday Kind Salon</a><nav aria-label="Sunday Kind Salon navigation"><a href="#details">Services</a><a href="#visit">The studio</a><a href="#next">Appointments</a></nav></header>
   <main>
     <section class="hero split wrap"><img src="../assets/salon.webp" alt="Salon chair beside an arched mirror" width="834" height="468" fetchpriority="high"><div class="split-copy"><p class="kicker">A NEIGHBORHOOD HAIR STUDIO</p><h1>Good hair.<br>Easy Sundays.</h1><p>Low-maintenance color, thoughtful cuts, and time to settle into the chair.</p><a class="cta" href="#next">Book a visit <span aria-hidden="true">↗</span></a></div></section>
     <section class="details wrap" id="details">
-      <h2>Find your service</h2>
-      <div class="items">
-        <article><h3>Cut &amp; style</h3><p>A consultation, wash, cut, and finish tailored to how you wear your hair.</p></article>
-        <article><h3>Color &amp; gloss</h3><p>Rich all-over color or a gloss to refresh tone and shine.</p></article>
-        <article><h3>Lived-in highlights</h3><p>Soft, dimensional color designed to grow out naturally.</p></article>
+      <div class="demo-section-heading">
+        <p class="kicker">The service menu</p>
+        <h2>Find your service</h2>
+        <p>Every appointment starts with a conversation about your hair, your routine, and what you’d like to see in the mirror.</p>
+      </div>
+      <div class="menu-filters" hidden aria-label="Services categories"><button type="button" aria-pressed="true" data-category="0">Cuts</button><button type="button" aria-pressed="false" data-category="1">Color</button><button type="button" aria-pressed="false" data-category="2">Consultations</button></div>
+      <div class="menu-groups">
+        <div class="menu-group" data-group="0"><h3>Cuts</h3>
+          <article><div><h4>Cut &amp; style</h4><p>A consultation, wash, cut, and finish tailored to how you wear your hair.</p></div><span>From $85 · 60 min</span></article>
+          <article><div><h4>Fringe trim</h4><p>A quick tidy between full cuts, booked on dry hair.</p></div><span>From $20 · 15 min</span></article>
+        </div>
+        <div class="menu-group" data-group="1"><h3>Color</h3>
+          <article><div><h4>Color &amp; gloss</h4><p>All-over color or a gloss to refresh tone and shine.</p></div><span>From $125 · 90 min</span></article>
+          <article><div><h4>Lived-in highlights</h4><p>Soft, dimensional color designed to grow out naturally.</p></div><span>From $220 · 150 min</span></article>
+        </div>
+        <div class="menu-group" data-group="2"><h3>Consultations</h3>
+          <article><div><h4>First-time color consultation</h4><p>Talk through your hair history, inspiration photos, and a realistic plan.</p></div><span>Complimentary · 20 min</span></article>
+          <article><div><h4>Gray blending consultation</h4><p>Explore ways to soften the regrowth line with highlights or tonal color.</p></div><span>Complimentary · 20 min</span></article>
+        </div>
       </div>
     </section>
-    <section class="next" id="next"><div class="wrap"><h2>Book a visit</h2><p>Start with a cut or color consultation if you’re unsure which appointment is right for you.</p><details><summary>What should I book for my first visit?</summary><p>If you’re planning a big change or have previous color, start with a consultation.</p></details></div></section>
+    <section class="demo-feature" id="visit">
+      <div class="wrap feature-grid">
+        <img src="../assets/salon-look.webp" alt="Soft caramel highlights blended through shoulder-length brown hair" width="834" height="468" loading="lazy">
+        <div>
+          <p class="kicker">Inside the studio</p>
+          <h2>A softer grow-out.</h2>
+          <p>Blended highlights add dimension while keeping the root close to its natural shade. Bring pictures of what you like, and we’ll talk through what works for your hair and your routine.</p>
+          <dl class="demo-facts">
+          <div><dt>Studio hours</dt><dd>Tue–Fri, 10 am–7 pm<br>Sat, 9 am–4 pm<br>Closed Sun–Mon</dd></div>
+          <div><dt>First-time color</dt><dd>Book a consultation if you have previous color or want a big change. Bring a photo of what you have in mind.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="next" id="next">
+      <div class="wrap booking-grid">
+        <div><h2>Book a visit</h2><p>Choose a service and a sample appointment time to see how booking works.</p></div>
+        <div class="demo-form-panel">
+          <form class="demo-form" data-result="Here’s your sample salon appointment." hidden>
+        <label>Service<select name="service" required><option value="" selected disabled>Choose service</option><option>Cut &amp; style</option><option>Fringe trim</option><option>Color &amp; gloss</option><option>Lived-in highlights</option><option>First-time color consultation</option><option>Gray blending consultation</option></select></label>
+        <label>Appointment time<select name="appointment" required><option value="" selected disabled>Choose appointment time</option><option>Tuesday, 10:00 am</option><option>Thursday, 4:30 pm</option><option>Saturday, 11:00 am</option></select></label>
+            <button type="submit" class="cta">Preview booking <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="demo-result" role="status"></div>
+          <p class="demo-note">Sample times only. This demo doesn’t reserve an appointment.</p>
+          <noscript>Enable JavaScript to try this preview.</noscript>
+        </div>
+      </div>
+    </section>
+    <section class="faq wrap">
+      <h2>Good to know</h2>
+      <div>
+        <details><summary>How should I arrive for my appointment?</summary><p>Come with your hair dry and worn as you usually style it. We’ll talk through your usual routine before getting started.</p></details>
+        <details><summary>How much will color cost?</summary><p>The service menu shows starting prices. We agree on the final price together before the service begins.</p></details>
+        <details><summary>How do I reschedule?</summary><p>For a real booking, you’d follow the link in your confirmation email and give at least 24 hours’ notice.</p></details>
+      </div>
+    </section>
   </main>
-  <footer class="wrap">Website concept by <a href="../index.html">Good Neighbor Web Studio</a></footer>
+  <footer class="wrap demo-footer"><span>Sunday Kind Salon</span><a href="../index.html#work">Website concept by Good Neighbor Web Studio</a></footer>
 </body>
 </html>
